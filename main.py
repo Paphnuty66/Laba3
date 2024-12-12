@@ -27,22 +27,24 @@ def checkurl(user_url):
 
 print("Что будем проверять? ")
 print("1-если свою строку, 2-если файл, 3-если сайт по url, 4-Выход")
-a = 0
-while a != 4:
-    a = int(input())
-    if a == 1:
+a = ""
+while a != "4":
+    a = input()
+    if a == "1":
         print("Введите вашу строку: ")
         user_string = input()
         otvet = checkpolz(user_string)
         print(otvet)
-    if a == 2:
+    if a == "2":
         print("Введите ваш путь к файлу: ")
         user_filepath = input()
         otvet = checkfile(user_filepath)
         print(otvet)
-    if a == 3:
+    if a == "3":
         print("Введите ваш url: ")
         user_url = input()
         otvet = checkurl(user_url)
         print(otvet)
+    else:
+        print("Введите номер")
 
