@@ -24,27 +24,29 @@ def checkurl(user_url):
     except Exception as e:
         return "Ошибка при работе с сайтом"
 
+if __name__ == "__main__":
+    print("Что будем проверять? ")
+    print("1-если свою строку, 2-если файл, 3-если сайт по url, 4-Выход")
+    a = ""
 
-print("Что будем проверять? ")
-print("1-если свою строку, 2-если файл, 3-если сайт по url, 4-Выход")
-a = ""
-while a != "4":
-    a = input()
-    if a == "1":
-        print("Введите вашу строку: ")
-        user_string = input()
-        otvet = checkpolz(user_string)
-        print(otvet)
-    if a == "2":
-        print("Введите ваш путь к файлу: ")
-        user_filepath = input()
-        otvet = checkfile(user_filepath)
-        print(otvet)
-    if a == "3":
-        print("Введите ваш url: ")
-        user_url = input()
-        otvet = checkurl(user_url)
-        print(otvet)
-    else:
-        print("Введите номер")
-
+    while a != "4":
+        a = input()
+        if a == "1":
+            print("Введите вашу строку: ")
+            user_string = input()
+            otvet = checkpolz(user_string)
+            print(otvet)
+        elif a == "2":
+            print("Введите ваш путь к файлу: ")
+            user_filepath = input()
+            otvet = checkfile(user_filepath)
+            print(otvet)
+        elif a == "3":
+            print("Введите ваш url: ")
+            user_url = input()
+            otvet = checkurl(user_url)
+            print(otvet)
+        elif a == "4":
+            print("Выход")
+        else:
+            print("Введите номер")

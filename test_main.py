@@ -26,3 +26,5 @@ class TestCheck(unittest.TestCase):
         self.assertEqual(result, ["123-456-789 12"])
 
 
+if __name__ == "__main__":
+    unittest.main()
